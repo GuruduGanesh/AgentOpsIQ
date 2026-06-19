@@ -1,0 +1,17 @@
+[project]
+name = "agentopsiq"
+version = "0.1.0"
+description = "Production intelligence for reliable AI agents."
+requires-python = ">=3.11"
+dependencies = [
+  "PyYAML>=6.0"
+]
+
+[project.scripts]
+agentopsiq = "agentopsiq:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

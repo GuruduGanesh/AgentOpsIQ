@@ -1,0 +1,32 @@
+# AgentOpsIQ local development artifacts
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+node_modules/
+dist/
+build/
+coverage/
+*.log
+*.tmp
+tmp/
+
+# Local lab and telemetry data
+.local/
+data/
+reports/
+artifacts/
+otel-data/
+prometheus-data/
+grafana-data/
+jaeger-data/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Microsoft Office temporary files
+~$*.docx

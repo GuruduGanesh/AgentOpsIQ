@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-agent-missing-limits
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-agent
+  template:
+    metadata:
+      labels:
+        app: sample-agent
+    spec:
+      containers:
+        - name: agent
+          image: agentopsiq/sample-agent:dev
+          ports:
+            - containerPort: 8080
+          env:
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: http://otel-collector:4317
+            - name: OTEL_SERVICE_NAME
+              value: sample-agent
