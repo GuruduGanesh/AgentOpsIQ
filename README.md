@@ -93,6 +93,7 @@ This structure keeps product strategy, architecture, implementation, infrastruct
 The first execution phase is documented here:
 
 - [Top Five Product Priorities](docs/product/top-five-product-priorities.md)
+- [Customer Pain Validation](docs/product/customer-pain-validation.md)
 - [Stage 1 - AgentOpsIQ Scanner Foundation](docs/stages/stage-1-agentopsiq-scanner.md)
 - [Readiness Checks v1](docs/product/readiness-checks-v1.md)
 - [Progress Tracker](docs/status/progress-tracker.md)
