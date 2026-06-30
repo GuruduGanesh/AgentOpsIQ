@@ -19,6 +19,7 @@ Current status: **Started**
 | 2026-06-19 | Stage 1 | Started | Scanner foundation docs, readiness checks, fixture plan, and issue log created | Choose implementation language |
 | 2026-06-19 | Scanner prototype | Started | Python CLI skeleton, first Kubernetes/OTel checks, Markdown/JSON output, and initial fixtures added | Run scanner locally and add tests |
 | 2026-06-19 | Scanner execution | Blocked | CLI execution reached dependency gate; bundled Python is missing PyYAML | Create local venv and install requirements |
+| 2026-06-29 | Scanner execution | Done | Created `.venv`, installed requirements, installed package editable, verified entry point, ran unit tests and fixture scans | Expand scanner checks and define OTel agent attributes |
 
 ## Milestone Tracker
 
@@ -26,9 +27,9 @@ Current status: **Started**
 |---|---|---|
 | M0: Project structure ready | Done | 2026-06-19 |
 | M1: Scanner foundation documented | Done | 2026-06-19 |
-| M2: Scanner CLI skeleton | Started | Next |
-| M3: First five scanner checks | Started | After CLI skeleton |
-| M4: Markdown/JSON report output | Started | After first checks |
+| M2: Scanner CLI skeleton | Done | 2026-06-29 |
+| M3: First five scanner checks | Done | 2026-06-29 |
+| M4: Markdown/JSON report output | Done | 2026-06-29 |
 | M5: Local lab sample agent | Not started | After scanner report |
 | M6: GitHub Action gate | Not started | After scanner MVP |
 

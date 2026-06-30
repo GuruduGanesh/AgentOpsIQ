@@ -8,6 +8,9 @@ node_modules/
 dist/
 build/
 coverage/
+*.egg-info/
+__pycache__/
+*.py[cod]
 *.log
 *.tmp
 tmp/

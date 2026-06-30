@@ -41,9 +41,11 @@ Not included yet:
 | Sample agent plan documented | Done | See `examples/sample-agent/README.md` |
 | Initial progress tracker created | Done | See `docs/status/progress-tracker.md` |
 | Initial issue log created | Done | See `docs/status/issue-log.md` |
-| Scanner implementation skeleton | Started | Python prototype created in `src/cli/agentopsiq.py` |
-| First YAML scanner rule | Started | Kubernetes resource and OTel env checks added |
-| First Markdown report output | Started | Markdown renderer added to CLI prototype |
+| Scanner implementation skeleton | Done | Python prototype created in `src/agentopsiq/cli.py` |
+| First YAML scanner rule | Done | Kubernetes resource and OTel env checks added |
+| First Markdown report output | Done | Markdown renderer added to CLI prototype |
+| First JSON report output | Done | JSON renderer verified through fixture scan |
+| First unit tests | Done | `tests/test_scanner.py` covers passing, missing resource limits, and missing OTel exporter fixtures |
 
 ## Initial Action Items
 
@@ -55,6 +57,26 @@ Not included yet:
 6. Add Markdown report output.
 7. Add JSON report output.
 8. Add unit tests for first checks.
+
+## Verification
+
+Verified on 2026-06-29:
+
+```text
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe -m pip install -e .
+.venv\Scripts\python.exe -m unittest discover -s tests -p "test_*.py"
+.venv\Scripts\agentopsiq.exe scan --path tests\fixtures\passing --format json
+.venv\Scripts\agentopsiq.exe scan --path tests\fixtures\missing-resource-limits --format json
+.venv\Scripts\agentopsiq.exe scan --path tests\fixtures\missing-otel-exporter --format json
+```
+
+Results:
+
+- Unit tests: 3 passed.
+- Passing fixture: score 100, 0 findings.
+- Missing resource limits fixture: score 64, 6 Kubernetes findings.
+- Missing OTel exporter fixture: score 84, 2 observability findings.
 
 ## Acceptance Criteria
 

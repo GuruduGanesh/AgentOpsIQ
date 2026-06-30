@@ -52,3 +52,13 @@ The first Python prototype lives in:
 ```text
 src/agentopsiq/cli.py
 ```
+
+## Verified Commands
+
+```bash
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe -m pip install -e .
+.venv\Scripts\agentopsiq.exe scan --path tests\fixtures\passing --format json
+.venv\Scripts\python.exe -m unittest discover -s tests -p "test_*.py"
+```
