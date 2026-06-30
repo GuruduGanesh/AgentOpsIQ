@@ -35,6 +35,8 @@ Short name: **AgentOpsIQ**
 
 Tagline: **Production intelligence for reliable AI agents.**
 
+Marketing headline: **Delegate with confidence.**
+
 Brand meaning:
 
 - **Agent**: built for production AI agents, not generic application monitoring.
@@ -44,6 +46,7 @@ Brand meaning:
 Product modules:
 
 - **AgentOpsIQ Scanner**
+- **AgentOpsIQ Trust Plane**
 - **AgentOpsIQ Control Plane**
 - **AgentOpsIQ Policy Engine**
 - **AgentOpsIQ Incident Workbench**
@@ -59,8 +62,10 @@ AgentOpsIQ/
       product-brief.md
       feature-catalog.md
       roadmap.md
+      trust-plane-direction.md
     architecture/
       reference-architecture.md
+      rule-engine-contract.md
     testing/
       local-lab-test-plan.md
     research/
@@ -94,12 +99,21 @@ The first execution phase is documented here:
 
 - [Top Five Product Priorities](docs/product/top-five-product-priorities.md)
 - [Customer Pain Validation](docs/product/customer-pain-validation.md)
+- [Trust Plane Direction](docs/product/trust-plane-direction.md)
+- [Shared Rule Engine Contract](docs/architecture/rule-engine-contract.md)
 - [Stage 1 - AgentOpsIQ Scanner Foundation](docs/stages/stage-1-agentopsiq-scanner.md)
 - [Readiness Checks v1](docs/product/readiness-checks-v1.md)
 - [Progress Tracker](docs/status/progress-tracker.md)
 - [Issue Log](docs/status/issue-log.md)
 
 The first product to build is **AgentOpsIQ Scanner**, because it is the fastest path to a useful demo, GitHub Action, enterprise readiness score, and later control-plane product.
+
+The locked strategic direction is now **one product, one codebase, two modes, one shared rule engine**:
+
+- **Scan mode:** checks an agent before it ships and reports readiness gaps.
+- **Guard mode:** sits in the live path while an agent runs and returns allow / ask-a-human / block verdicts.
+
+The scanner remains the free adoption wedge. The runtime Agent Trust Plane is the durable enterprise product.
 
 ## Important Boundary
 

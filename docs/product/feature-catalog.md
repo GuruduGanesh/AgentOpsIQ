@@ -1,5 +1,16 @@
 # AgentOpsIQ Feature Catalog
 
+## Shared Rule Engine
+
+- One rule engine for scan mode and guard mode
+- Reusable rule objects
+- Static evaluation for readiness findings
+- Runtime evaluation for allow / ask / block verdicts
+- Policy-as-code rule packs later
+- Custom organization rule packs later
+- Critical/high/medium/low severity model
+- 100-point readiness scoring
+
 ## AgentOpsIQ Scanner
 
 - Kubernetes manifest scanning
@@ -10,6 +21,20 @@
 - Production readiness score
 - Markdown, JSON, and future SARIF output
 - CI/CD pass/fail gates
+
+## Agent Trust Plane / Guard Mode
+
+- Runtime wrapper, proxy, gateway, or MCP proxy
+- Guard every important tool call, model call, and external action
+- Return allow / ask-a-human / block verdicts
+- Agent identity and least-privilege tool scopes
+- Cost caps per task/day
+- Retry budgets
+- Rate limits
+- Latency guards
+- Kill switch
+- High-risk tool blocking
+- Human approval for risky actions
 
 ## Observability
 
@@ -47,6 +72,9 @@
 
 - Policy-as-code
 - High-risk tool-call audit logs
+- Runtime allow / ask / block decision log
+- Human approval records
+- Data-retention controls
 - RBAC roadmap
 - SSO roadmap
 - Compliance report roadmap
@@ -64,3 +92,18 @@
 - GitHub Actions
 - ArgoCD
 - ServiceNow roadmap
+
+## Human Approval Experience
+
+- Web approval inbox first
+- Approve / Block decision flow
+- Context-rich risk explanation
+- Desktop cockpit later
+- Mobile approval app later
+
+## Confidence Score
+
+- Shareable agent reliability/safety score
+- Starts from scanner readiness score
+- Expands with runtime guard coverage
+- Can become trust badge later

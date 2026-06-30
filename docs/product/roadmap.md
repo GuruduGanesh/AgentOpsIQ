@@ -15,6 +15,7 @@
 - Generate Markdown and JSON reports.
 - Create sample AI agent and failure fixtures.
 - Capture first OpenTelemetry traces locally.
+- Refactor scanner checks into the shared rule engine without changing output.
 
 ## 60 Days
 
@@ -23,6 +24,7 @@
 - Add CI fail-on-critical mode.
 - Add OpenTelemetry collector pack.
 - Add local dashboard prototype.
+- Prototype `agentopsiq guard` with cost-cap and block-risky-tool rules.
 
 ## 90 Days
 
@@ -31,6 +33,7 @@
 - Build AKS deployment outline.
 - Create demo screenshots and a short product video.
 - Collect feedback from trusted SRE/platform contacts.
+- Add first web approval inbox requirements and audit-log design.
 
 ## 3-6 Months
 

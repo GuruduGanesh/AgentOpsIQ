@@ -11,6 +11,10 @@ This file tracks product, technical, legal, and execution issues.
 | AOP-ISS-004 | Medium | Product | OpenTelemetry semantic attributes for AI agents need v1 definition | Blocks telemetry pack | Draft `docs/architecture/otel-agent-attributes.md` | Open |
 | AOP-ISS-005 | Low | Branding | Domain/trademark availability not verified for AgentOpsIQ | Could affect public launch naming | Check domain, GitHub org, package names, and trademark before public launch | Open |
 | AOP-ISS-006 | Medium | Testing | Scanner prototype needs more rule coverage beyond the first fixtures | Blocks confidence in broader production readiness scoring | Add tests for unsafe secrets, GitHub Action gate, and retry-budget policy checks | Open |
+| AOP-ISS-008 | High | Architecture | Shared rule engine contract must stay compatible with current scan output while enabling guard verdicts | Refactor could break scanner behavior or create separate scan/guard logic | Implement `docs/architecture/rule-engine-contract.md` and keep fixture scores unchanged | Open |
+| AOP-ISS-009 | High | Runtime safety | Guard mode adds live-path latency and fail-safe decision requirements | Unsafe defaults could allow risky actions or excessive latency could block adoption | Define latency budget, fail-closed/ask policy, and bypass/kill-switch behavior before guard v0.1 | Open |
+| AOP-ISS-010 | Medium | Product | Human approval UX is not designed yet | Ask/block flows may be unusable without clear context and audit state | Start with web approval inbox requirements before desktop/mobile | Open |
+| AOP-ISS-011 | Medium | Security | Guard mode threat model is undefined | Runtime proxy/wrapper could become a privileged control point without clear isolation | Draft threat model before production guard deployment | Open |
 
 ## Closed Issues
 
